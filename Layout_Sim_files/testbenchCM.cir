@@ -1,0 +1,11 @@
+.INCLUDE tsmc_spice_180nm.lib
+.INCLUDE cascode_current_mirror.spice
+V1 vdd gnd 1.8
+V2 vbiasp gnd 1.223
+.TRAN 0.01 1
+.control 
+run
+plot vbiasp vbias1 vbias2 vbias3 vbias4
+.endc
+.end
+

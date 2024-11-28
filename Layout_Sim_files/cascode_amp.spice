@@ -1,0 +1,13 @@
+* SPICE3 file created from cascode_amp.ext - technology: scmos
+
+.option scale=0.09u
+
+M1000 a_10_n80# vin gnd Gnd nfet w=10 l=2
++  ad=160 pd=72 as=80 ps=36
+M1001 a_10_n48# vbias1 vdd vdd pfet w=48 l=2
++  ad=768 pd=224 as=384 ps=112
+M1002 vout vbias3 a_10_n80# Gnd nfet w=10 l=2
++  ad=80 pd=36 as=0 ps=0
+M1003 vout vbias2 a_10_n48# vdd pfet w=48 l=2
++  ad=384 pd=112 as=0 ps=0
+C0 vdd Gnd 8.11fF

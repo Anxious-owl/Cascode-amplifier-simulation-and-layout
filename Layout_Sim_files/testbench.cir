@@ -1,0 +1,13 @@
+.INCLUDE tsmc_spice_180nm.lib
+.INCLUDE cascode_amp.spice
+V1 vdd gnd 1.8
+V2 vbias1 gnd 1.12
+V3 vbias2 gnd 0.91
+V4 vbias3 gnd 0.864
+V5 vin gnd SIN(0.6969 100m 10000)
+.TRAN 0.000001 1m
+.control 
+run
+plot vout vin
+.endc
+.end
